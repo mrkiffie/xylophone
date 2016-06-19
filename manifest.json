@@ -1,0 +1,21 @@
+{
+  "lang": "en",
+  "short_name": "Xylophone",
+  "name": "Xylophone",
+  "description": "A simple Xylophone using the Web Audio API",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "orientation": "landscape",
+  "theme_color": "#08f",
+  "icons": [
+    {
+      "src": "images/xylophone.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "images/xylophone.svg"
+    }
+  ]
+}
