@@ -43,7 +43,7 @@ body {
 
 .ripple-effect {
     pointer-events: none;
-    margin: -.5em;
+    margin: -1.5em;
     width: 3em;
     height: 3em;
     border-radius: 50%;
