@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    background: #ddd;
+}
+#xylophone {
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#xylophone:before,
+#xylophone:after {
+    content: '';
+    display: block;
+    width: 98%;
+    height: 2em;
+    top: 14%;
+    left: 1%;
+    background: #663300;
+    position: absolute;
+    z-index: -1;
+    transform: rotateZ(2deg);
+}
+#xylophone:after {
+    top: auto;
+    bottom: 14%;
+    transform: rotateZ(-2deg);
+}
+
+.ripple-effect {
+    pointer-events: none;
+    margin: -.5em;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: rgba(255,255,255, .8);
+    position: absolute;
+    animation: ripple-animation 1s;
+    will-change: transform, opacity;
+    opacity: 0;
+}
+
+@keyframes ripple-animation {
+    from {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(50);
+        opacity: 0;
+    }
+}
+
+.note {
+    position: relative;
+    overflow: hidden;
+    height: 92vh;
+    width: 10vw;
+    margin: 3vh 1vw;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.note:before,
+.note:after {
+    content: '';
+    display: block;
+    background: gray;
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin: 0 -.5em;
+    border-radius: 50%;
+    box-shadow: 0 -.1em .5em rgba(0,0,0,.7) inset;
+    z-index: 1;
+}
+.note:after {
+    top: inherit;
+    bottom: 10%;
+}
+.note:nth-child(n+1) {
+    background: #673AB7;
+    height: 92vh;
+    margin: 3vh 1vw;
+}
+.note:nth-child(n+2) {
+    background: #3F51B5;
+    height: 90vh;
+    margin: 4vh 1vw;
+}
+.note:nth-child(n+3) {
+    background: #03A9F4;
+    height: 88vh;
+    margin: 5vh 1vw;
+}
+.note:nth-child(n+4) {
+    background: #4CAF50;
+    height: 86vh;
+    margin: 6vh 1vw;
+}
+.note:nth-child(n+5) {
+    background: #FFEB3B;
+    height: 84vh;
+    margin: 7vh 1vw;
+}
+.note:nth-child(n+6) {
+    background: #FF9800;
+    height: 82vh;
+    margin: 8vh 1vw;
+}
+.note:nth-child(n+7) {
+    background: #FF5722;
+    height: 80vh;
+    margin: 9vh 1vw;
+}
+.note:nth-child(n+8) {
+    background: #E91E63;
+    height: 78vh;
+    margin: 10vh 1vw;
+}
